@@ -6,6 +6,9 @@
       "Bash(curl -s http://localhost:8001/page/styles.css)",
       "Bash(curl -s http://localhost:8001/src/headings.js)",
       "Bash(python3 .agents/skills/ui-ux-pro-max/scripts/search.py \"dark tool install steps card drag interactive loading state\" --domain ux -n 10)"
+    ],
+    "additionalDirectories": [
+      "/Users/arantxah/Desktop/Experiments\\ 🚀/a11y\\ Auditor"
     ]
   }
 }
