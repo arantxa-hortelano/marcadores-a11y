@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Auditor a11y — Kit de accesibilidad para equipos de producto</title>
+  <meta name="description" content="9 herramientas para auditar accesibilidad con un solo clic. Sin instalar nada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Ir al contenido principal</a>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <p class="logo">Auditor <span>a11y</span></p>
+      <nav aria-label="Navegación principal">
+        <a href="#bookmarklets-section">Herramientas</a>
+        <a href="#instrucciones">Cómo usar</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="hero-titulo">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-pulse" aria-hidden="true"></span>
+        9 herramientas · Sin instalación · Funciona en cualquier web
+      </div>
+      <h1 id="hero-titulo">Detecta problemas<br>de accesibilidad<br>al instante</h1>
+      <p class="hero-sub">Arrastra un marcador a tu navegador y audita accesibilidad con un solo clic. Resultados en la página y en JSON listo para el LLM.</p>
+      <div class="hero-actions">
+        <a href="#bookmarklets-section" class="btn-primary">Ver las 9 herramientas</a>
+        <a href="#instrucciones" class="btn-ghost">Cómo funciona →</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="panel-mock">
+        <div class="panel-header">
+          <span class="panel-title">Headings · a11y</span>
+          <span class="panel-stats">
+            <span class="pstat-error">❌ 2</span>
+            <span class="pstat-warning">⚠️ 1</span>
+            <span class="pstat-ok">✅ 3</span>
+          </span>
+          <span class="panel-close">×</span>
+        </div>
+        <div class="panel-toolbar">
+          <button class="panel-copy-btn" tabindex="-1">Copiar JSON</button>
+        </div>
+        <div class="panel-findings">
+          <div class="panel-finding --error">
+            <div class="finding-criterion">WCAG 2.4.6 — Encabezados y etiquetas</div>
+            <div class="finding-row">
+              <span class="finding-icon">❌</span>
+              <span class="finding-msg">H1 duplicado: "Bienvenido". Solo debe haber un H1 por página.</span>
+            </div>
+            <div class="finding-el">h1.hero-title</div>
+          </div>
+          <div class="panel-finding --error">
+            <div class="finding-criterion">WCAG 1.3.1 — Información y relaciones</div>
+            <div class="finding-row">
+              <span class="finding-icon">❌</span>
+              <span class="finding-msg">Salto de H2 a H4 — falta nivel H3.</span>
+            </div>
+            <div class="finding-el">h4.card-subtitle</div>
+          </div>
+          <div class="panel-finding --warning">
+            <div class="finding-criterion">WCAG 2.4.6 — Encabezados y etiquetas</div>
+            <div class="finding-row">
+              <span class="finding-icon">⚠️</span>
+              <span class="finding-msg">H3 con texto genérico: "Más información".</span>
+            </div>
+            <div class="finding-el">h3.section-title</div>
+          </div>
+          <div class="panel-finding --ok">
+            <div class="finding-criterion">WCAG 2.4.6 — Encabezados y etiquetas</div>
+            <div class="finding-row">
+              <span class="finding-icon">✅</span>
+              <span class="finding-msg">H2: "Nuestros servicios" — nivel correcto.</span>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">6 elementos analizados</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+  <div class="container">
+
+    <section class="instructions" aria-labelledby="como-usarlos" id="instrucciones">
+      <header class="section-header">
+        <h2 class="section-label" id="como-usarlos">Cómo empezar</h2>
+        <p class="section-sub">En 4 pasos, sin instalar nada</p>
+      </header>
+      <div class="steps">
+        <div class="step">
+          <div class="step-badge">
+            <div class="step-icon">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 2h10a1 1 0 0 1 1 1v14l-6-3.5L4 17V3a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="step-num">Paso 1</span>
+          </div>
+          <strong>Arrastra a marcadores</strong>
+          <p>Coge cualquier botón verde y suéltalo en la barra de marcadores del navegador.</p>
+        </div>
+        <div class="step">
+          <div class="step-badge">
+            <div class="step-icon">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M10 2c-1.5 0-3.5 3.5-3.5 8s2 8 3.5 8" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M10 2c1.5 0 3.5 3.5 3.5 8s-2 8-3.5 8" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M2 10h16" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </div>
+            <span class="step-num">Paso 2</span>
+          </div>
+          <strong>Abre la página a auditar</strong>
+          <p>Navega a cualquier web. El bookmarklet funciona en cualquier dominio.</p>
+        </div>
+        <div class="step">
+          <div class="step-badge">
+            <div class="step-icon">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 2l13 9-7.5.9-2.5 7L4 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="step-num">Paso 3</span>
+          </div>
+          <strong>Haz clic en el marcador</strong>
+          <p>El análisis se ejecuta y los resultados aparecen en un panel flotante sobre la página.</p>
+        </div>
+        <div class="step">
+          <div class="step-badge">
+            <div class="step-icon">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <rect x="7" y="2" width="9" height="12" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+                <rect x="4" y="6" width="9" height="12" rx="1.5" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M7 10h4M7 13h2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="step-num">Paso 4</span>
+          </div>
+          <strong>Copia el JSON</strong>
+          <p>Pulsa "Copiar JSON" en el panel y pégalo en el chat del LLM para análisis detallado.</p>
+        </div>
+      </div>
+
+      <div class="server-notice" id="file-protocol-notice" role="alert" aria-live="assertive">
+        <strong>Atención:</strong> Esta página está abierta como archivo local y los bookmarklets no pueden generarse así.<br><br>
+        Ábrela con un servidor local desde la carpeta <code>Bookmarklets/</code>:<br><br>
+        <code>python3 -m http.server 8000</code><br><br>
+        Luego abre <code>http://localhost:8000/page/</code> en el navegador.
+      </div>
+    </section>
+
+    <section class="bookmarklets-section" id="bookmarklets-section" aria-labelledby="bookmarklets-titulo">
+      <header class="section-header">
+        <h2 class="section-label" id="bookmarklets-titulo">Las 9 herramientas</h2>
+        <p class="section-sub">Arrastra cualquier botón a tu barra de marcadores para instalarlo</p>
+      </header>
+      <div class="bookmarklets-grid" id="bookmarklets-grid" role="list" aria-busy="true" aria-label="Lista de bookmarklets de accesibilidad">
+        <!-- Las tarjetas se generan con script.js -->
+      </div>
+    </section>
+
+    <section class="results-section" id="resultados" aria-labelledby="resultados-titulo">
+      <header class="section-header">
+        <h2 class="section-label" id="resultados-titulo">Entiende los resultados</h2>
+        <p class="section-sub">Cada hallazgo incluye severidad, selector CSS y criterio WCAG</p>
+      </header>
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="how-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 6v5M10 14v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Qué significa cada color</h3>
+          <ul class="severity-list">
+            <li><span class="color-dot" style="background:#ff4757"></span><strong>Rojo / error</strong> — falla un criterio WCAG, corrección necesaria</li>
+            <li><span class="color-dot" style="background:#ffa502"></span><strong>Naranja / aviso</strong> — posible problema, revisar manualmente</li>
+            <li><span class="color-dot" style="background:#2ed573"></span><strong>Verde / correcto</strong> — elemento analizado y sin problema</li>
+          </ul>
+        </div>
+        <div class="how-card">
+          <div class="how-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+              <path d="M13 3H7a2 2 0 00-2 2v10a2 2 0 002 2h6a2 2 0 002-2V5a2 2 0 00-2-2z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 8h4M8 11h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Pásalo a la IA</h3>
+          <p>Cada hallazgo lleva criterio WCAG, selector CSS, mensaje y sugerencia de corrección. Copia el JSON y pégalo en Claude para obtener un plan de corrección priorizado.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+              <rect x="2" y="4" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M6 4V3M14 4V3M2 8h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>El panel y los resaltados</h3>
+          <p>El panel muestra el recuento de errores, avisos y correctos. Los elementos problemáticos se resaltan en la página con un borde de color. Al cerrar el panel desaparecen todos los resaltados.</p>
+        </div>
+        <div class="how-card">
+          <div class="how-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 7v4l3 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Ve directo al problema</h3>
+          <p>Haz clic en cualquier hallazgo del panel. La página hace scroll hasta el elemento y lo enfoca. El selector CSS del hallazgo identifica exactamente qué elemento reparar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="limits-section" aria-labelledby="limites-titulo">
+      <h2 class="section-label" id="limites-titulo">Limitaciones conocidas</h2>
+      <ul class="limits-list" role="list">
+        <li class="limit-item" role="listitem">
+          <span class="limit-icon" aria-hidden="true">⚠️</span>
+          <span>El bookmarklet de <strong>axe-core</strong> necesita cargar <code>cdn.jsdelivr.net</code>. Puede fallar en páginas con política de seguridad (CSP) estricta, el resto de bookmarklets funcionarán igualmente.</span>
+        </li>
+        <li class="limit-item" role="listitem">
+          <span class="limit-icon" aria-hidden="true">🔒</span>
+          <span>Los <strong>iframes</strong> de otro dominio no se pueden analizar, es una limitación del navegador, no de los bookmarklets.</span>
+        </li>
+        <li class="limit-item" role="listitem">
+          <span class="limit-icon" aria-hidden="true">🎨</span>
+          <span>El análisis de <strong>contraste</strong> puede ser impreciso en imágenes de fondo, gradientes y transparencias complejas.</span>
+        </li>
+        <li class="limit-item" role="listitem">
+          <span class="limit-icon" aria-hidden="true">🔍</span>
+          <span>Los análisis automáticos son una <strong>primera capa de detección</strong>. Complementa siempre con pruebas manuales y lector de pantalla para una auditoría completa.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="llm-section" aria-labelledby="llm-titulo">
+      <h2 class="section-label" id="llm-titulo">Usar resultados con IA</h2>
+      <div class="llm-card" role="note">
+        Después de ejecutar cualquier bookmarklet, los resultados quedan guardados en
+        <code>window.__a11yResults</code>. Desde el panel lateral que abre el bookmarklet puedes
+        copiar el JSON completo con el botón <em>"Copiar JSON"</em> y pegarlo directamente en una
+        conversación con Claude u otra IA para obtener recomendaciones de corrección detalladas.
+        <br><br>
+        También puedes escribir en la consola del navegador:<br>
+        <code>copy(JSON.stringify(window.__a11yResults, null, 2))</code>
+
+        <details class="json-preview">
+          <summary>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            Ver ejemplo de JSON
+          </summary>
+          <pre class="json-snippet" aria-label="Ejemplo de JSON de resultados"><span class="k">"bookmarklet"</span>: <span class="s">"headings"</span>,
+<span class="k">"url"</span>: <span class="s">"https://ejemplo.com"</span>,
+<span class="k">"resumen"</span>: {
+  <span class="k">"total"</span>: <span class="n">6</span>, <span class="k">"errores"</span>: <span class="n">2</span>, <span class="k">"avisos"</span>: <span class="n">1</span>, <span class="k">"correctos"</span>: <span class="n">3</span>
+},
+<span class="k">"hallazgos"</span>: [
+  {
+    <span class="k">"estado"</span>: <span class="s">"error"</span>,
+    <span class="k">"criterio"</span>: <span class="s">"1.3.1"</span>,
+    <span class="k">"titulo"</span>: <span class="s">"Información y relaciones"</span>,
+    <span class="k">"selector"</span>: <span class="s">"h3.card-title"</span>,
+    <span class="k">"mensaje"</span>: <span class="s">"Salto de nivel de H1 a H3"</span>,
+    <span class="k">"sugerencia"</span>: <span class="s">"Cambia H3 por H2"</span>
+  }
+]</pre>
+        </details>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="page-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <p class="logo footer-logo">Auditor <span>a11y</span></p>
+      <nav class="footer-links" aria-label="Enlaces del pie">
+        <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank" rel="noopener noreferrer">Referencia WCAG 2.2</a>
+        <a href="https://dequeuniversity.com/rules/axe/" target="_blank" rel="noopener noreferrer">Reglas axe-core</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
