@@ -96,7 +96,7 @@ var BOOKMARKLETS = [
   }
 ];
 
-var BASE = '../src/';
+var BASE = './src/';
 
 function fetchText(url) {
   return fetch(url).then(function(r) {
