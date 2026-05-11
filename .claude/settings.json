@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 .agents/skills/ui-ux-pro-max/scripts/search.py \"developer tool accessibility audit dark minimal\" --design-system -p \"a11y Auditor\")",
+      "Bash(curl -s http://localhost:8001/page/index.html)",
+      "Bash(curl -s http://localhost:8001/page/styles.css)",
+      "Bash(curl -s http://localhost:8001/src/headings.js)",
+      "Bash(python3 .agents/skills/ui-ux-pro-max/scripts/search.py \"dark tool install steps card drag interactive loading state\" --domain ux -n 10)"
+    ]
+  }
+}
